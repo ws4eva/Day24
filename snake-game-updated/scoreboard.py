@@ -2,8 +2,8 @@ from turtle import Turtle
 
 ALIGNMENT = "center"
 FONT = ('Arial', 12, 'normal')
-DATA_FILE_PATH = "Day24\snake-game-updated\data.txt" #The file link must contain full path from the work environment
-
+#DATA_FILE_PATH = "Day24\snake-game-updated\data.txt" #The file link must contain full path from the work environment
+DATA_FILE_PATH = "/Users/Owner/Desktop/data.txt"
 class Scoreboard(Turtle):
     def __init__(self):
         super().__init__()

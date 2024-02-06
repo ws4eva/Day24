@@ -11,7 +11,6 @@ template_path = "Day24/Mail+Merge+Project+Start/Mail Merge Project Start/Input/L
 name_list_path = "Day24/Mail+Merge+Project+Start/Mail Merge Project Start/Input/Names/invited_names.txt"
 ready_to_send_path = "Day24/Mail+Merge+Project+Start/Mail Merge Project Start/Output/ReadyToSend/"
 
-letter_list = []
 with open(template_path) as file:
     contents = file.read()
 #print(contents)
@@ -23,10 +22,8 @@ with open(name_list_path) as file:
 
 
 for name in name_list:
-    name = name.replace("\n", "")
+    name = name.strip()
     letter = contents.replace("[name]", name)
-    letter_list.append(letter)
-    
     new_file_name = f"Letter for {name}.txt"
     with open(ready_to_send_path + new_file_name, mode = "w") as file:
         file.write(letter)
